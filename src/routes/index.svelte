@@ -1,2 +1,19 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Tasks from '$lib/Tasks.svelte';
+	import UserStore from '../stores/user.js'
+	let user = $UserStore
+
+	$: console.log(user)
+</script>
+
+<style>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+</style>
+
+
+
+{#if $UserStore}
+	<Tasks />
+{/if}
