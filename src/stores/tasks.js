@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store'
-import firebase from 'firebase/app'
-import 'firebase/firestore'
+import firebase from '@firebase/app'
+import '@firebase/firestore'
 
 const tasks = writable([])
 

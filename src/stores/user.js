@@ -1,7 +1,7 @@
 import {writable} from 'svelte/store'
-import firebase from 'firebase/app'
-import 'firebase/auth'
-import 'firebase/firestore'
+import firebase from '@firebase/app'
+import '@firebase/auth'
+import '@firebase/firestore'
 import TasksStore from './tasks.js'
 
 const user = writable()

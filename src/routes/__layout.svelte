@@ -1,10 +1,10 @@
 <script>
 	import Header from '$lib/Header.svelte';
 	import AuthModal from '$lib/AuthModal.svelte';
-	import firebase from 'firebase/app';
+	import firebase from '@firebase/app';
 	import UserStore from '../stores/user.js';
-	import 'firebase/auth';
-	import 'firebase/firestore';
+	import '@firebase/auth';
+	import '@firebase/firestore';
 	import { onMount } from 'svelte';
 	let showSigninModal = false;
 	let signInSelected;
@@ -27,7 +27,7 @@
 				appId: '1:1061500429743:web:156fe8c1af7d2e55b97b5a'
 			};
 			// Initialize Firebase
-			firebase.initializeApp(firebaseConfig);
+			firebase.default.initializeApp(firebaseConfig);
 
 			firebase.auth().onAuthStateChanged((user) => {
 				UserStore.setUser(user);
